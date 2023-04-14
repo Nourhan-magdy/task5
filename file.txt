@@ -1,0 +1,19 @@
+1) create databse camp23_movies
+
+2) //the creation of the table 
+ 
+ create table thecamp_cinema(
+    id int not null primary key,
+    movie_name varchar(50),
+    movie_length int,
+    movie_director varchar(50)
+)
+
+3) // the creation of the second table 
+
+  create table thecamp_movies_ratings(
+    id2 int primary key,
+    movie_id int REFERENCES thecamp_cinema (id),
+    movie_review varchar(255),
+    date2 date
+)
